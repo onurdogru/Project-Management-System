@@ -1,0 +1,687 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{0933A886-30E6-4414-81F4-6EADAF6EDCE2}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>ALPARGE</RootNamespace>
+    <AssemblyName>ALPARGE</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <IsWebBootstrapper>true</IsWebBootstrapper>
+    <PublishUrl>\\192.168.0.5\wwwroot\ArGe\Publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Web</InstallFrom>
+    <UpdateEnabled>true</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <InstallUrl>http://192.168.0.5:5010/Alparge/publish/</InstallUrl>
+    <TargetCulture>tr-TR</TargetCulture>
+    <ProductName>AlpArge 2.0</ProductName>
+    <PublisherName>AlpArge Uygulaması</PublisherName>
+    <ApplicationRevision>110</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <CreateDesktopShortcut>true</CreateDesktopShortcut>
+    <PublishWizardCompleted>true</PublishWizardCompleted>
+    <BootstrapperEnabled>false</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x86'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x86\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisIgnoreGeneratedCode>false</CodeAnalysisIgnoreGeneratedCode>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x86'">
+    <OutputPath>bin\x86\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>Alparge.ico</ApplicationIcon>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestCertificateThumbprint>8D02F043AFC0BEDF52C0B3B828266AFD5871821E</ManifestCertificateThumbprint>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestKeyFile>
+    </ManifestKeyFile>
+  </PropertyGroup>
+  <PropertyGroup>
+    <GenerateManifests>true</GenerateManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignManifests>true</SignManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignAssembly>false</SignAssembly>
+  </PropertyGroup>
+  <PropertyGroup>
+    <AssemblyOriginatorKeyFile>devcert.pfx</AssemblyOriginatorKeyFile>
+  </PropertyGroup>
+  <PropertyGroup>
+    <DelaySign>false</DelaySign>
+  </PropertyGroup>
+  <PropertyGroup />
+  <ItemGroup>
+    <Reference Include="Pabasecontrols, Version=1.0.0.0, Culture=neutral, processorArchitecture=x86">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\x86\Debug\Pabasecontrols.dll</HintPath>
+    </Reference>
+    <Reference Include="Padbcontrols, Version=1.0.0.0, Culture=neutral, processorArchitecture=x86">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\x86\Debug\Padbcontrols.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AppForms\Analizler\FrmPersonelCalismaPlan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AppForms\Analizler\FrmPersonelCalismaPlan.Designer.cs">
+      <DependentUpon>FrmPersonelCalismaPlan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AppForms\Analizler\FrmPersonelCalismaSure.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AppForms\Analizler\FrmPersonelCalismaSure.Designer.cs">
+      <DependentUpon>FrmPersonelCalismaSure.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AppForms\Analizler\FrmProjePlanUyumSureleri.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AppForms\Analizler\FrmProjePlanUyumSureleri.Designer.cs">
+      <DependentUpon>FrmProjePlanUyumSureleri.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AppForms\Analizler\FrmProjeTamamlanmaDetay.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AppForms\Analizler\FrmProjeTamamlanmaDetay.Designer.cs">
+      <DependentUpon>FrmProjeTamamlanmaDetay.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AppForms\Analizler\FrmProjeTamamlanmaOran.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AppForms\Analizler\FrmProjeTamamlanmaOran.Designer.cs">
+      <DependentUpon>FrmProjeTamamlanmaOran.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AppForms\FrmDashboard.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AppForms\FrmDashboard.Designer.cs">
+      <DependentUpon>FrmDashboard.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AppForms\Genel\FrmDosyaDetay.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AppForms\Genel\FrmDosyaDetay.Designer.cs">
+      <DependentUpon>FrmDosyaDetay.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AppForms\Genel\FrmDosyalar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AppForms\Genel\FrmDosyalar.Designer.cs">
+      <DependentUpon>FrmDosyalar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AppForms\Genel\FrmDosyaYeniKlasor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AppForms\Genel\FrmDosyaYeniKlasor.Designer.cs">
+      <DependentUpon>FrmDosyaYeniKlasor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AppForms\Genel\FrmPersonelGCTanim.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AppForms\Genel\FrmPersonelGCTanim.Designer.cs">
+      <DependentUpon>FrmPersonelGCTanim.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AppForms\Genel\FrmProjeGorevTipDetay.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AppForms\Genel\FrmProjeGorevTipDetay.Designer.cs">
+      <DependentUpon>FrmProjeGorevTipDetay.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AppForms\Genel\FrmProjeGorevTipleri.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AppForms\Genel\FrmProjeGorevTipleri.Designer.cs">
+      <DependentUpon>FrmProjeGorevTipleri.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AppForms\Genel\FrmProjeKaynakDetay.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AppForms\Genel\FrmProjeKaynakDetay.Designer.cs">
+      <DependentUpon>FrmProjeKaynakDetay.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AppForms\Genel\FrmCatiProjeDetay.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AppForms\Genel\FrmCatiProjeDetay.Designer.cs">
+      <DependentUpon>FrmCatiProjeDetay.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AppForms\Genel\FrmCatiProjeler.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AppForms\Genel\FrmCatiProjeler.Designer.cs">
+      <DependentUpon>FrmCatiProjeler.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AppForms\Genel\FrmKullaniciDetay.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AppForms\Genel\FrmKullaniciDetay.Designer.cs">
+      <DependentUpon>FrmKullaniciDetay.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AppForms\Genel\FrmKullaniciGrup.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AppForms\Genel\FrmKullaniciGrup.Designer.cs">
+      <DependentUpon>FrmKullaniciGrup.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AppForms\Genel\FrmKullaniciIslemleri.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AppForms\Genel\FrmKullaniciIslemleri.Designer.cs">
+      <DependentUpon>FrmKullaniciIslemleri.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AppForms\Genel\FrmKullaniciTanim.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AppForms\Genel\FrmKullaniciTanim.Designer.cs">
+      <DependentUpon>FrmKullaniciTanim.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AppForms\Genel\FrmMusteriDetay.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AppForms\Genel\FrmMusteriDetay.Designer.cs">
+      <DependentUpon>FrmMusteriDetay.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AppForms\Genel\FrmMusteriler.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AppForms\Genel\FrmMusteriler.Designer.cs">
+      <DependentUpon>FrmMusteriler.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AppForms\Genel\FrmProjeKaynak.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AppForms\Genel\FrmProjeKaynak.Designer.cs">
+      <DependentUpon>FrmProjeKaynak.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AppForms\Genel\FrmProjeNotlarDetay.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AppForms\Genel\FrmProjeNotlarDetay.Designer.cs">
+      <DependentUpon>FrmProjeNotlarDetay.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AppForms\Genel\FrmProjeNotlar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AppForms\Genel\FrmProjeNotlar.Designer.cs">
+      <DependentUpon>FrmProjeNotlar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AppForms\Genel\FrmSaatUcretleri.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AppForms\Genel\FrmSaatUcretleri.Designer.cs">
+      <DependentUpon>FrmSaatUcretleri.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AppForms\Genel\FrmSaatUcretleriDetay.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AppForms\Genel\FrmSaatUcretleriDetay.Designer.cs">
+      <DependentUpon>FrmSaatUcretleriDetay.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AppForms\Genel\FrmSistemAyar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AppForms\Genel\FrmSistemAyar.Designer.cs">
+      <DependentUpon>FrmSistemAyar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AppForms\Projeler\FrmPersonelProjeCalisma.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AppForms\Projeler\FrmPersonelProjeCalisma.Designer.cs">
+      <DependentUpon>FrmPersonelProjeCalisma.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AppForms\Projeler\FrmPersonelProjeCalismaDetay.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AppForms\Projeler\FrmPersonelProjeCalismaDetay.Designer.cs">
+      <DependentUpon>FrmPersonelProjeCalismaDetay.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AppForms\Projeler\FrmPersonelProjeTurnikeBilgi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AppForms\Projeler\FrmPersonelProjeTurnikeBilgi.Designer.cs">
+      <DependentUpon>FrmPersonelProjeTurnikeBilgi.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AppForms\Projeler\FrmProjeKapama.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AppForms\Projeler\FrmProjeKapama.Designer.cs">
+      <DependentUpon>FrmProjeKapama.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AppForms\Projeler\FrmProjeKapamaDetay.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AppForms\Projeler\FrmProjeKapamaDetay.Designer.cs">
+      <DependentUpon>FrmProjeKapamaDetay.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AppForms\Projeler\FrmProjeKapamaOnay.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AppForms\Projeler\FrmProjeKapamaOnay.Designer.cs">
+      <DependentUpon>FrmProjeKapamaOnay.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AppForms\Projeler\FrmProjeKart.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AppForms\Projeler\FrmProjeKart.Designer.cs">
+      <DependentUpon>FrmProjeKart.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AppForms\Projeler\FrmProjeListesi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AppForms\Projeler\FrmProjeListesi.Designer.cs">
+      <DependentUpon>FrmProjeListesi.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AppForms\Projeler\FrmProjeOnay.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AppForms\Projeler\FrmProjeOnay.Designer.cs">
+      <DependentUpon>FrmProjeOnay.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AppForms\Projeler\FrmProjePlanDetay.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AppForms\Projeler\FrmProjePlanDetay.Designer.cs">
+      <DependentUpon>FrmProjePlanDetay.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AppForms\Projeler\FrmProjePlanlama.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AppForms\Projeler\FrmProjePlanlama.Designer.cs">
+      <DependentUpon>FrmProjePlanlama.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AppForms\Projeler\FrmProjeToplantilari.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AppForms\Projeler\FrmProjeToplantilari.Designer.cs">
+      <DependentUpon>FrmProjeToplantilari.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AppForms\Projeler\FrmProjeToplantilariDetay.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AppForms\Projeler\FrmProjeToplantilariDetay.Designer.cs">
+      <DependentUpon>FrmProjeToplantilariDetay.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AppForms\Sistem\BaseRecordList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AppForms\Sistem\BaseRecordList.Designer.cs">
+      <DependentUpon>BaseRecordList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AppForms\Sistem\FrmLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AppForms\Sistem\FrmLogin.designer.cs">
+      <DependentUpon>FrmLogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AppForms\Sistem\BaseForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AppForms\Sistem\BaseForm.Designer.cs">
+      <DependentUpon>BaseForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AppForms\Sistem\FrmSearch.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AppForms\Sistem\FrmSearch.designer.cs">
+      <DependentUpon>FrmSearch.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AppForms\Talepler\FrmSorumluAtama.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AppForms\Talepler\FrmSorumluAtama.Designer.cs">
+      <DependentUpon>FrmSorumluAtama.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AppForms\Talepler\FrmTalepOnay.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AppForms\Talepler\FrmTalepOnay.designer.cs">
+      <DependentUpon>FrmTalepOnay.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AppForms\Talepler\FrmTalepGiris.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AppForms\Talepler\FrmTalepGiris.Designer.cs">
+      <DependentUpon>FrmTalepGiris.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AppForms\Talepler\FrmTalepListesi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AppForms\Talepler\FrmTalepListesi.Designer.cs">
+      <DependentUpon>FrmTalepListesi.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AppForms\TestForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AppForms\TestForm.Designer.cs">
+      <DependentUpon>TestForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Classes\AppParams.cs" />
+    <Compile Include="Classes\FileProcess.cs" />
+    <Compile Include="Classes\Functions.cs" />
+    <Compile Include="AppForms\Sistem\FrmDbConfig.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AppForms\Sistem\FrmDbConfig.designer.cs">
+      <DependentUpon>FrmDbConfig.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MainForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainForm.Designer.cs">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Settings.cs" />
+    <None Include="Resources\Edit.png" />
+    <None Include="Resources\sign1.png" />
+    <None Include="Resources\approved.png" />
+    <None Include="Resources\sign.png" />
+    <EmbeddedResource Include="AppForms\Analizler\FrmPersonelCalismaPlan.resx">
+      <DependentUpon>FrmPersonelCalismaPlan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AppForms\Analizler\FrmPersonelCalismaSure.resx">
+      <DependentUpon>FrmPersonelCalismaSure.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AppForms\Analizler\FrmProjePlanUyumSureleri.resx">
+      <DependentUpon>FrmProjePlanUyumSureleri.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AppForms\Analizler\FrmProjeTamamlanmaDetay.resx">
+      <DependentUpon>FrmProjeTamamlanmaDetay.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AppForms\Analizler\FrmProjeTamamlanmaOran.resx">
+      <DependentUpon>FrmProjeTamamlanmaOran.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AppForms\FrmDashboard.resx">
+      <DependentUpon>FrmDashboard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AppForms\Genel\FrmDosyaDetay.resx">
+      <DependentUpon>FrmDosyaDetay.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AppForms\Genel\FrmDosyalar.resx">
+      <DependentUpon>FrmDosyalar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AppForms\Genel\FrmDosyaYeniKlasor.resx">
+      <DependentUpon>FrmDosyaYeniKlasor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AppForms\Genel\FrmPersonelGCTanim.resx">
+      <DependentUpon>FrmPersonelGCTanim.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AppForms\Genel\FrmProjeGorevTipDetay.resx">
+      <DependentUpon>FrmProjeGorevTipDetay.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AppForms\Genel\FrmProjeGorevTipleri.resx">
+      <DependentUpon>FrmProjeGorevTipleri.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AppForms\Genel\FrmProjeKaynakDetay.resx">
+      <DependentUpon>FrmProjeKaynakDetay.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AppForms\Genel\FrmCatiProjeDetay.resx">
+      <DependentUpon>FrmCatiProjeDetay.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AppForms\Genel\FrmCatiProjeler.resx">
+      <DependentUpon>FrmCatiProjeler.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AppForms\Genel\FrmKullaniciDetay.resx">
+      <DependentUpon>FrmKullaniciDetay.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AppForms\Genel\FrmKullaniciGrup.resx">
+      <DependentUpon>FrmKullaniciGrup.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AppForms\Genel\FrmKullaniciIslemleri.resx">
+      <DependentUpon>FrmKullaniciIslemleri.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AppForms\Genel\FrmKullaniciTanim.resx">
+      <DependentUpon>FrmKullaniciTanim.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AppForms\Genel\FrmMusteriDetay.resx">
+      <DependentUpon>FrmMusteriDetay.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AppForms\Genel\FrmMusteriler.resx">
+      <DependentUpon>FrmMusteriler.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AppForms\Genel\FrmProjeKaynak.resx">
+      <DependentUpon>FrmProjeKaynak.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AppForms\Genel\FrmProjeNotlarDetay.resx">
+      <DependentUpon>FrmProjeNotlarDetay.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AppForms\Genel\FrmProjeNotlar.resx">
+      <DependentUpon>FrmProjeNotlar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AppForms\Genel\FrmSaatUcretleri.resx">
+      <DependentUpon>FrmSaatUcretleri.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AppForms\Genel\FrmSaatUcretleriDetay.resx">
+      <DependentUpon>FrmSaatUcretleriDetay.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AppForms\Genel\FrmSistemAyar.resx">
+      <DependentUpon>FrmSistemAyar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AppForms\Projeler\FrmPersonelProjeCalisma.resx">
+      <DependentUpon>FrmPersonelProjeCalisma.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AppForms\Projeler\FrmPersonelProjeCalismaDetay.resx">
+      <DependentUpon>FrmPersonelProjeCalismaDetay.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AppForms\Projeler\FrmPersonelProjeTurnikeBilgi.resx">
+      <DependentUpon>FrmPersonelProjeTurnikeBilgi.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AppForms\Projeler\FrmProjeKapama.resx">
+      <DependentUpon>FrmProjeKapama.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AppForms\Projeler\FrmProjeKapamaDetay.resx">
+      <DependentUpon>FrmProjeKapamaDetay.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AppForms\Projeler\FrmProjeKapamaOnay.resx">
+      <DependentUpon>FrmProjeKapamaOnay.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AppForms\Projeler\FrmProjeKart.resx">
+      <DependentUpon>FrmProjeKart.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AppForms\Projeler\FrmProjeListesi.resx">
+      <DependentUpon>FrmProjeListesi.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AppForms\Projeler\FrmProjeOnay.resx">
+      <DependentUpon>FrmProjeOnay.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AppForms\Projeler\FrmProjePlanDetay.resx">
+      <DependentUpon>FrmProjePlanDetay.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AppForms\Projeler\FrmProjePlanlama.resx">
+      <DependentUpon>FrmProjePlanlama.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AppForms\Projeler\FrmProjeToplantilari.resx">
+      <DependentUpon>FrmProjeToplantilari.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AppForms\Projeler\FrmProjeToplantilariDetay.resx">
+      <DependentUpon>FrmProjeToplantilariDetay.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AppForms\Sistem\BaseForm.resx">
+      <DependentUpon>BaseForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AppForms\Sistem\BaseRecordList.resx">
+      <DependentUpon>BaseRecordList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AppForms\Sistem\FrmLogin.resx">
+      <DependentUpon>FrmLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AppForms\Sistem\FrmSearch.resx">
+      <DependentUpon>FrmSearch.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AppForms\Talepler\FrmSorumluAtama.resx">
+      <DependentUpon>FrmSorumluAtama.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AppForms\Talepler\FrmTalepOnay.resx">
+      <DependentUpon>FrmTalepOnay.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AppForms\Talepler\FrmTalepGiris.resx">
+      <DependentUpon>FrmTalepGiris.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AppForms\Talepler\FrmTalepListesi.resx">
+      <DependentUpon>FrmTalepListesi.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AppForms\TestForm.resx">
+      <DependentUpon>TestForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainForm.resx">
+      <DependentUpon>MainForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <Content Include="ALPARGE.EXE.config">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="app.config">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <SubType>Designer</SubType>
+    </Content>
+    <None Include="devcert.pfx" />
+    <Content Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </Content>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="AlpArge.ico" />
+    <Content Include="AppForms\Genel\MailSablon.html" />
+    <None Include="document\add.png" />
+    <None Include="document\edit.png" />
+    <None Include="document\save.png" />
+    <None Include="document\remove.png" />
+    <None Include="document\search.png" />
+    <None Include="document\cancel.png" />
+    <None Include="document\confirm.png" />
+    <None Include="document\AlpArge.ico" />
+    <Content Include="ProjeNotlar.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <PublishFile Include="AlpArge.ico">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>File</FileType>
+    </PublishFile>
+    <PublishFile Include="AppForms\Genel\MailSablon.html">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Exclude</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>File</FileType>
+    </PublishFile>
+    <PublishFile Include="ProjeNotlar.txt">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Exclude</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>File</FileType>
+    </PublishFile>
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+
+
+
+
+
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

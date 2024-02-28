@@ -1,0 +1,27 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="ALPARGE.Properties" GeneratedClassName="Settings">
+  <Profiles />
+  <Settings>
+    <Setting Name="ServerName" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">192.168.0.5</Value>
+    </Setting>
+    <Setting Name="DbName" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">ALPARGE</Value>
+    </Setting>
+    <Setting Name="DbUser" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">OtomasNET</Value>
+    </Setting>
+    <Setting Name="PassWord" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">ujMFcGLTUh8WJ5m7Fmhwe5UkHuuF+dxErWjsoezCf+g=</Value>
+    </Setting>
+    <Setting Name="Parameters" Type="System.String" Scope="User">
+      <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="UserName" Type="System.String" Scope="User">
+      <Value Profile="(Default)">ADMIN</Value>
+    </Setting>
+    <Setting Name="Update" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">True</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>
